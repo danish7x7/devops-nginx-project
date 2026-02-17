@@ -126,7 +126,7 @@ devops-nginx-project/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/danish07/devops-nginx-project.git
+git clone https://github.com/danish7x7/devops-nginx-project.git
 cd devops-nginx-project
 ```
 
@@ -249,7 +249,7 @@ Building this project taught me:
 
 ## 👨‍💻 Author
 
-**Danish** - [@danish07](https://github.com/danish07)
+**Danish** - [@danish7x7](https://github.com/danish7x7)
 
 *Built as part of a DevOps learning journey - from zero command line experience to production-grade cloud infrastructure!*
 
