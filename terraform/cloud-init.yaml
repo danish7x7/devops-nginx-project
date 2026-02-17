@@ -1,0 +1,37 @@
+#cloud-config
+
+# Update and upgrade packages on first boot
+package_update: true
+package_upgrade: true
+
+# Install required packages
+packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common
+
+# Commands to run on first boot
+runcmd:
+  # Install Docker
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+  - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  - apt-get update
+  - apt-get install -y docker-ce docker-ce-cli containerd.io
+
+  # Start and enable Docker
+  - systemctl start docker
+  - systemctl enable docker
+
+  # Pull and run Nginx container
+  - docker run -d -p 80:80 --name nginx-server --restart always nginx:latest
+
+# Write a welcome message
+write_files:
+  - path: /etc/motd
+    content: |
+      ============================================
+      Welcome to Danish's DevOps Server!
+      Managed by Terraform
+      Running: Docker + Nginx
+      ============================================
