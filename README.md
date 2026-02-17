@@ -22,3 +22,9 @@ Automated deployment of Nginx web server in Docker on DigitalOcean using Terrafo
 - Docker
 - Nginx
 - Git
+
+## Progress
+- ✅ Environment setup complete
+- ✅ Git configured
+- ✅ SSH keys generated
+- ⏳ Next: DigitalOcean account setup
