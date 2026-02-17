@@ -1,0 +1,6 @@
+# Copy this file to terraform.tfvars and fill in your values
+# cp terraform.tfvars.example terraform.tfvars
+
+region       = "nyc3"        # DigitalOcean region
+home_ip      = "1.2.3.4"     # Your home IP (curl ifconfig.me)
+droplet_size = "s-1vcpu-1gb" # Droplet size
